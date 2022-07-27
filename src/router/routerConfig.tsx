@@ -1,0 +1,91 @@
+import type { RouteObject } from "react-router-dom";
+
+import React from 'react';
+import Home from '@/pages/Home';
+import CardList from '@/pages/CardList';
+
+import Card from '@/components/Card';
+import DigitalClock from '@/components/DigitalClock';
+import HoverLoad from '@/components/HoverLoad';
+import MyCard from '@/components/MyCard';
+import AvatarInfo from '@/components/AvatarInfo';
+import CubeCraze from '@/components/CubeCraze';
+import NoMatch from '@/components/404';
+import { FadeInOut } from "@/components/FadeInOut";
+import { Loading } from '@/components/Loading';
+import AvatarBadge from '@/components/AvatarBadge';
+import Button from '@/components/Button';
+import Button1 from '@/components/Button1'
+import { LoginPopup } from '@/components/LoginPopup';
+import UserCard from '@/components/UserCard';
+
+const routes: RouteObject[] = [
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "cardList",
+    element: <CardList />,
+    children: [
+      {
+        index: true,
+        element: <Card />
+      },
+      {
+        path: "digitalClock",
+        element: <DigitalClock />,
+      },
+      {
+        path: "hoverLoad",
+        element: <HoverLoad />
+      },
+      {
+        path: "myCard",
+        element: <MyCard />,
+      },
+      {
+        path: "avatarInfo",
+        element: <AvatarInfo />,
+      },
+      {
+        path: "cubeCraze",
+        element: <CubeCraze />,
+      },
+      {
+        path: "fadeInOut",
+        element: <FadeInOut />,
+      },
+      {
+        path: 'loading',
+        element: <Loading />
+      },
+      {
+        path: 'AvatarBadge',
+        element: <AvatarBadge />
+      },
+      {
+        path: 'Button',
+        element: <Button />
+      },
+      {
+        path: 'Button1',
+        element: <Button1 />
+      },
+      {
+        path: 'LoginPopup',
+        element: <LoginPopup />
+      },
+      {
+        path: 'UserCard',
+        element: <UserCard />
+      },
+    ],
+  },
+  {
+    path: "*'",
+    element: <NoMatch />,
+  },
+];
+
+export default routes;

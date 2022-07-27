@@ -1,0 +1,109 @@
+.container {
+  position: relative;
+  height: 100%;
+  background-color: #c0c0c0;
+}
+
+.action {
+  position: fixed;
+  top: 200px;
+  left: 50%;
+}
+
+.action .profile {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.action .profile img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.action .menu {
+  position: absolute;
+  top: 80px;
+  right: -10px;
+  padding: 10px 20px;
+  background-color: #fff;
+  width: 280px;
+  border-radius: 15px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+
+.action .active.menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(00px);
+}
+
+.action .menu::before {
+  position: absolute;
+  top: -5px;
+  right: 28px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+
+.action .menu h3 {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.2em;
+}
+
+.action .menu h3 span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #cecece;
+}
+
+.action .menu ul li {
+  list-style: none;
+  padding: 10px;
+  border-radius: 10px;
+  border-top: 1px solid rgb(0, 0, 0, 0.05);
+  filter: hue-rotate(0deg);
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.action .menu ul li span:nth-child(1) {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  font-size: 20px;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.action .menu ul li:hover {
+  background-color: rgb(162, 125, 14);
+  filter: hue-rotate(360deg);
+  opacity: 1;
+  visibility: visible;
+  color: rgba(50, 218, 137);
+}
+
+.action .menu ul li span:nth-child(2) {
+  text-align: left;
+}

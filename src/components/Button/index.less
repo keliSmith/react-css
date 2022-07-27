@@ -1,0 +1,72 @@
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: #27282c;
+  a {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #fff;
+    padding: 10px 30px;
+    font-weight: 400;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    transition: 0.5s;
+    span {
+      position: relative;
+      z-index: 1;
+    }
+    i {
+      position: absolute;
+      inset: 0;
+      display: block;
+    }
+    i::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 80%;
+      width: 10px;
+      height: 4px;
+      background-color: #27282c;
+      transform: translateX(-50%) skewX(325deg);
+      transition: 0.5s;
+    }
+    i::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      right: 80%;
+      width: 10px;
+      height: 4px;
+      background-color: #27282c;
+      transform: translateX(-50%) skewX(325deg);
+      transition: 0.5s;
+    }
+  }
+  a:hover {
+    color: var(--clr);
+    background-color: var(--clr);
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px var(--clr);
+    i::before {
+      width: 20px;
+      left: 20%;
+    }
+    i::after {
+      width: 20px;
+      right: 20%;
+    }
+  }
+  a::before {
+    position: absolute;
+    content: "";
+    inset: 2px;
+    background-color: #27282c;
+  }
+}
