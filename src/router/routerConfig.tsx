@@ -18,6 +18,7 @@ import Button from '@/components/Button';
 import Button1 from '@/components/Button1'
 import { LoginPopup } from '@/components/LoginPopup';
 import UserCard from '@/components/UserCard';
+import { TypingScale } from "@/components/TypingScale";
 
 const routes: RouteObject[] = [
   {
@@ -79,6 +80,10 @@ const routes: RouteObject[] = [
       {
         path: 'UserCard',
         element: <UserCard />
+      },
+      {
+        path: 'TypingScale',
+        element: <TypingScale />
       },
     ],
   },

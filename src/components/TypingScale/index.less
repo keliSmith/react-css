@@ -1,0 +1,39 @@
+.content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #6a85b6, #bac8e0);
+  .input {
+    position: relative;
+    min-height: 40px;
+    padding: 0 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: text;
+    animation: 0.2s;
+    div {
+      position: absolute;
+      opacity: 0;
+    }
+    .printAnimate {
+      animation: print 0.2s ease-in-out;
+    }
+  }
+}
+
+@keyframes print {
+  0% {
+    position: absolute;
+    transform: scale(50);
+  }
+  99% {
+    position: absolute;
+  }
+  100% {
+    position: relative;
+  }
+}
