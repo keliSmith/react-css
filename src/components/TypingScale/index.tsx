@@ -1,7 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef } from 'react';
 import { Input } from 'antd';
 import type { InputRef } from 'antd';
-import classNames from "classnames";
+import classNames from 'classnames';
 import styles from './index.less';
 
 // 随机颜色

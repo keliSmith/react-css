@@ -12,15 +12,15 @@ module.exports = {
     node: true,
   },
   settings: { // 自动发现React的版本，从而进行规范react代码
-    "react": {
-      "pragma": "React",
-      "version": "detect"
+    'react': {
+      'pragma': 'React',
+      'version': 'detect'
     }
   },
   parserOptions: {        // 指定ESLint可以解析JSX语法
-    "ecmaVersion": 2019,
-    "sourceType": 'module',
-    "ecmaFeatures": {
+    'ecmaVersion': 2019,
+    'sourceType': 'module',
+    'ecmaFeatures': {
       jsx: true
     }
   },
@@ -36,11 +36,12 @@ module.exports = {
         'ignoreDestructuring': true,
       }
     ],
-    'eol-last': [2, "always"],
+    'eol-last': [2, 'always'],
     'indent': [2, 2],
-    'jsx-quotes': [2, "prefer-single"],
-    'max-len': [2, { "code": 100 }],
+    'jsx-quotes': [2, 'prefer-single'],
+    'quotes': [2, 'single'],
+    'max-len': [2, { 'code': 100 }],
     'object-curly-spacing': [2, 'always'],
-    'spaced-comment': [2, "always"]
+    'spaced-comment': [2, 'always']
   },
 }

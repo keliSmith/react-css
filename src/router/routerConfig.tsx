@@ -1,4 +1,4 @@
-import type { RouteObject } from "react-router-dom";
+import type { RouteObject } from 'react-router-dom';
 
 import React from 'react';
 import Home from '@/pages/Home';
@@ -11,22 +11,22 @@ import MyCard from '@/components/MyCard';
 import AvatarInfo from '@/components/AvatarInfo';
 import CubeCraze from '@/components/CubeCraze';
 import NoMatch from '@/components/404';
-import { FadeInOut } from "@/components/FadeInOut";
+import { FadeInOut } from '@/components/FadeInOut';
 import { Loading } from '@/components/Loading';
 import AvatarBadge from '@/components/AvatarBadge';
 import Button from '@/components/Button';
 import Button1 from '@/components/Button1'
 import { LoginPopup } from '@/components/LoginPopup';
 import UserCard from '@/components/UserCard';
-import { TypingScale } from "@/components/TypingScale";
+import { TypingScale } from '@/components/TypingScale';
 
 const routes: RouteObject[] = [
   {
-    path: "/",
+    path: '/',
     element: <Home />,
   },
   {
-    path: "cardList",
+    path: 'cardList',
     element: <CardList />,
     children: [
       {
@@ -34,27 +34,27 @@ const routes: RouteObject[] = [
         element: <Card />
       },
       {
-        path: "digitalClock",
+        path: 'digitalClock',
         element: <DigitalClock />,
       },
       {
-        path: "hoverLoad",
+        path: 'hoverLoad',
         element: <HoverLoad />
       },
       {
-        path: "myCard",
+        path: 'myCard',
         element: <MyCard />,
       },
       {
-        path: "avatarInfo",
+        path: 'avatarInfo',
         element: <AvatarInfo />,
       },
       {
-        path: "cubeCraze",
+        path: 'cubeCraze',
         element: <CubeCraze />,
       },
       {
-        path: "fadeInOut",
+        path: 'fadeInOut',
         element: <FadeInOut />,
       },
       {
@@ -88,7 +88,7 @@ const routes: RouteObject[] = [
     ],
   },
   {
-    path: "*'",
+    path: '*\'',
     element: <NoMatch />,
   },
 ];
