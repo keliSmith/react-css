@@ -74,6 +74,11 @@ const routerConfit = [
     name: 'TypingScale',
     path: 'typingScale'
   },
+  {
+    id: 15,
+    name: 'Progress',
+    path: 'progress'
+  }
 ]
 
 function CardList() {

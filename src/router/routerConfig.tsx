@@ -19,6 +19,7 @@ import Button1 from '@/components/Button1'
 import { LoginPopup } from '@/components/LoginPopup';
 import UserCard from '@/components/UserCard';
 import { TypingScale } from '@/components/TypingScale';
+import Progress from '@/components/Progress';
 
 const routes: RouteObject[] = [
   {
@@ -85,6 +86,13 @@ const routes: RouteObject[] = [
         path: 'TypingScale',
         element: <TypingScale />
       },
+      {
+        path: 'Progress',
+        element: <Progress size={800} radius={250} progress={60} orbitColor={{
+          '0%': '#FF3440',
+          '100%': '#FFDAD3',
+        }} />
+      }
     ],
   },
   {
