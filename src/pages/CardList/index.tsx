@@ -78,6 +78,11 @@ const routerConfit = [
     id: 15,
     name: 'Progress',
     path: 'progress'
+  },
+  {
+    id: 16,
+    name: 'TaiJi',
+    path: 'taiJi'
   }
 ]
 

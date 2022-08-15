@@ -20,6 +20,7 @@ import { LoginPopup } from '@/components/LoginPopup';
 import UserCard from '@/components/UserCard';
 import { TypingScale } from '@/components/TypingScale';
 import Progress from '@/components/Progress';
+import TaiJi from '@/components/TaiJi';
 
 const routes: RouteObject[] = [
   {
@@ -92,6 +93,10 @@ const routes: RouteObject[] = [
           '0%': '#FF3440',
           '100%': '#FFDAD3',
         }} />
+      },
+      {
+        path: 'TaiJi',
+        element: <TaiJi />
       }
     ],
   },
