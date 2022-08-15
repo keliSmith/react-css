@@ -18,6 +18,8 @@ interface ProgressProps {
   /** 进度条宽度 */
   orbitWidth?: number;
   className?: string;
+  /** 文本颜色 */
+  fontColor?: string;
 }
 export function isObj(x: unknown): x is Record<string, unknown> {
   const type = typeof x;
@@ -37,6 +39,7 @@ const Progress:React.FC<ProgressProps> = (props) => {
     progressWidth = 10,
     orbitColor = 'red',
     orbitWidth = 10,
+    fontColor = '#fff'
   } = props;
 
   useEffect(() => {
@@ -89,10 +92,10 @@ const Progress:React.FC<ProgressProps> = (props) => {
     function text(n: number){
       const scale = R / 100;
       ctx.save(); // save和restore可以保证样式属性只运用于该段canvas元素
-      ctx.strokeStyle = '#fff'; // 设置描边样式
+      ctx.fillStyle = fontColor; // 设置描边样式
       ctx.font = `${40 * scale}px Arial`; // 设置字体大小和字体
       // 绘制字体，并且指定位置
-      ctx.strokeText(n.toFixed(0)+'%', centerX-(25 * scale), centerY+(10 * scale));
+      ctx.fillText(n.toFixed(0)+'%', centerX-(25 * scale), centerY+(10 * scale));
       ctx.stroke(); // 执行绘制
       ctx.restore();
     }
