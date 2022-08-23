@@ -4,7 +4,7 @@ import styles from './index.less';
 interface TaiJiProps {
   /** 画布的尺寸 */
   size?: number;
-  radius: number;
+  radius?: number;
 }
 const TaiJi:React.FC<TaiJiProps> = (props) => {
   const {

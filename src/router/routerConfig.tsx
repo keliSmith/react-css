@@ -21,6 +21,7 @@ import UserCard from '@/components/UserCard';
 import { TypingScale } from '@/components/TypingScale';
 import Progress from '@/components/Progress';
 import TaiJi from '@/components/TaiJi';
+import { ScrollAnimate } from '@/components/ScrollAnimate';
 
 const routes: RouteObject[] = [
   {
@@ -97,6 +98,10 @@ const routes: RouteObject[] = [
       {
         path: 'TaiJi',
         element: <TaiJi />
+      },
+      {
+        path: 'ScrollAnimate',
+        element: <ScrollAnimate />
       }
     ],
   },

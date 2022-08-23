@@ -83,6 +83,11 @@ const routerConfit = [
     id: 16,
     name: 'TaiJi',
     path: 'taiJi'
+  },
+  {
+    id: 17,
+    name: 'ScrollAnimate',
+    path: 'ScrollAnimate'
   }
 ]
 
