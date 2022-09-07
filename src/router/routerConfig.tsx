@@ -1,6 +1,6 @@
 import type { RouteObject } from 'react-router-dom';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Home from '@/pages/Home';
 import CardList from '@/pages/CardList';
 
@@ -22,6 +22,17 @@ import { TypingScale } from '@/components/TypingScale';
 import Progress from '@/components/Progress';
 import TaiJi from '@/components/TaiJi';
 import { ScrollAnimate } from '@/components/ScrollAnimate';
+import Intervalometer from '@/components/Intervalometer';
+
+const IntervalometerContainer = () => {
+  const [isRuning, setIsRuning] = useState(true);
+  return (
+    <Intervalometer isRuning={isRuning}>
+      <button onClick={() => setIsRuning(false)}>暂停</button>
+      <button onClick={() => setIsRuning(true)}>开始</button>
+    </Intervalometer>
+  )
+}
 
 const routes: RouteObject[] = [
   {
@@ -102,6 +113,10 @@ const routes: RouteObject[] = [
       {
         path: 'ScrollAnimate',
         element: <ScrollAnimate />
+      },
+      {
+        path: 'Intervalometer',
+        element: <IntervalometerContainer/>
       }
     ],
   },

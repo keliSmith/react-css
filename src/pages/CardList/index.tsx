@@ -88,6 +88,11 @@ const routerConfit = [
     id: 17,
     name: 'ScrollAnimate',
     path: 'ScrollAnimate'
+  },
+  {
+    id: 18,
+    name: 'Intervalometer',
+    path: 'Intervalometer'
   }
 ]
 
