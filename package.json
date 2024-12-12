@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "ts-node ./config/webpack.dev.ts",
     "build": "ts-node ./config/webpack.prod.ts",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "predeploy": "npm run dist",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint --ext .tsx,.ts,.js --fix ./src",
     "lint:fix": "eslint --fix --ext .tsx,.ts,.js --fix ./src",
     "prepare": "husky install"
