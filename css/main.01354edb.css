@@ -40,8 +40,9 @@
   min-height: 100px;
 }
 .head_U0C8y .nav_xIInz .logo_nUtEm {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
   border-radius: 50%;
   overflow: hidden;
 }
@@ -158,10 +159,7 @@
   border-right: #ccc 1px solid;
 }
 .cardList__ciIq .container_bj7NE .menu_ewDs6 ul li {
-  padding: 10px 20px;
-  background-color: #fff;
   margin: 10px;
-  border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,8 +170,17 @@
       justify-content: space-around;
 }
 .cardList__ciIq .container_bj7NE .menu_ewDs6 ul li a {
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 10px;
   text-decoration: none;
   font-size: 20px;
+}
+.cardList__ciIq .container_bj7NE .menu_ewDs6 ul li .active_jeIfT {
+  background-color: #1688dc;
+  color: #fff;
 }
 .cardList__ciIq .container_bj7NE .content_Cn3eN {
   -webkit-box-flex: 1;
@@ -1670,4 +1677,4 @@ section {
 }
 
 
-/*# sourceMappingURL=main.d03b4cf7.css.map*/
+/*# sourceMappingURL=main.01354edb.css.map*/
