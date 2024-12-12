@@ -59,6 +59,7 @@
     "@ant-design/icons": "^4.7.0",
     "antd": "^4.21.3",
     "classnames": "^2.3.1",
-    "react-router-dom": "^6.3.0"
-  }
+    "react-router-dom": "^6.26.2"
+  },
+  "repository": "https://github.com/keliSmith/react-css.git"
 }

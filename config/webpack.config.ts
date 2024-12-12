@@ -3,13 +3,13 @@ import { Configuration } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
-export const initWebpackConfig = (mode: "development" | "production"):Configuration => {
+export const initWebpackConfig = (mode: 'development' | 'production'):Configuration => {
   const isPro:boolean = mode === 'production';
 
   return {
     target: 'web', // 默认打包成web平台的
     mode,
-    devtool: "source-map",
+    devtool: 'source-map',
     entry: path.resolve(__dirname, '../src/index.tsx'), // 文件的入口
     output: {
       filename: isPro ? 'js/[name].[chunkhash:8].js' : '[name].[hash:8].js', // 文件名
@@ -52,8 +52,8 @@ export const initWebpackConfig = (mode: "development" | "production"):Configurat
                   // mode: "local",
                   // auto: true,
                   // exportGlobals: true,
-                  localIdentName: "[local]_[hash:base64:5]",
-                  localIdentContext: path.resolve(__dirname, "src"),
+                  localIdentName: '[local]_[hash:base64:5]',
+                  localIdentContext: path.resolve(__dirname, 'src'),
                   // localIdentHashSalt: "my-custom-hash",
                   // namedExport: true,
                   // exportLocalsConvention: "camelCase",
@@ -75,8 +75,8 @@ export const initWebpackConfig = (mode: "development" | "production"):Configurat
                   // mode: "local",
                   // auto: true,
                   // exportGlobals: true,
-                  localIdentName: "[local]_[hash:base64:5]",
-                  localIdentContext: path.resolve(__dirname, "src"),
+                  localIdentName: '[local]_[hash:base64:5]',
+                  localIdentContext: path.resolve(__dirname, 'src'),
                   // localIdentHashSalt: "my-custom-hash",
                   // namedExport: true,
                   // exportLocalsConvention: "camelCase",
@@ -99,6 +99,7 @@ export const initWebpackConfig = (mode: "development" | "production"):Configurat
     plugins: [
       new HtmlWebpackPlugin({
         title: 'css-animation',
+        favicon: path.join(__dirname, ('../src/assets/favicon.png')),
         filename: 'index.html',
         template: path.resolve(__dirname, './public.ejs'),
         hash: true,

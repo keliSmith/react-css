@@ -7,7 +7,7 @@ const routerConfit = [
   {
     id: 1,
     name: 'Card',
-    path: ''
+    path: 'card',
   },
   {
     id: 2,
@@ -99,7 +99,14 @@ const routerConfit = [
 function CardList() {
   const renderMenus = routerConfit.map(router =>
     <li key={router.id}>
-      <NavLink to={router.path}>{router.name}</NavLink>
+      <NavLink
+        to={router.path}
+        className={({ isActive }) =>
+          isActive ? styles.active : ''
+        }
+      >
+        {router.name}
+      </NavLink>
     </li>
   );
 
