@@ -1,11 +1,14 @@
 {
   "name": "css-animation",
   "version": "1.0.0",
+  "homepage": "http://github.com/keliSmith/react-css.git",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node ./config/webpack.dev.ts",
     "build": "ts-node ./config/webpack.prod.ts",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages-d build",
     "lint": "eslint --ext .tsx,.ts,.js --fix ./src",
     "lint:fix": "eslint --fix --ext .tsx,.ts,.js --fix ./src",
     "prepare": "husky install"
@@ -31,6 +34,7 @@
     "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.30.0",
+    "gh-pages": "^6.0.0",
     "git-commit-msg-linter": "^4.1.3",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.1",
