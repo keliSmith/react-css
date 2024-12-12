@@ -30,16 +30,22 @@
       scroll-behavior: smooth;
       border-right: #ccc 1px solid;
       ul li {
-        padding: 10px 20px;
-        background-color: #fff;
         margin: 10px;
-        border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: space-around;
         a {
+          width: 100%;
+          height: 100%;
+          padding: 10px 20px;
+          background-color: #fff;
+          border-radius: 10px;
           text-decoration: none;
           font-size: 20px;
+        }
+        .active {
+          background-color: #1688dc;
+          color: #fff;
         }
       }
     }

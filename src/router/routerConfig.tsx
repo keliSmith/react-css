@@ -1,4 +1,5 @@
 import type { RouteObject } from 'react-router-dom';
+import { Navigate } from 'react-router-dom'
 
 import React, { useState } from 'react';
 import Home from '@/pages/Home';
@@ -40,12 +41,16 @@ const routes: RouteObject[] = [
     element: <Home />,
   },
   {
-    path: 'cardList',
+    path: '/cardList',
     element: <CardList />,
     children: [
       {
         index: true,
-        element: <Card />
+        element: <Navigate to='/cardList/card' />,
+      },
+      {
+        path: 'card',
+        element: <Card />,
       },
       {
         path: 'digitalClock',

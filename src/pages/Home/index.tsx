@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { SettingOutlined } from '@ant-design/icons'
+import favicon from '@/assets/favicon.png'
 import styles from './index.less';
 
 function Home() {
@@ -9,7 +10,7 @@ function Home() {
       <div className={styles.head}>
         <div className={styles.nav}>
           <div className={styles.logo}>
-            <img src='' alt='加载失败' />
+            <img src={favicon} alt='加载失败' />
           </div>
           <div className={styles.menu}>
             {/* <ul>{renderMenu()}</ul> */}
