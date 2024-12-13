@@ -57,6 +57,9 @@
   },
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
+    "@tsparticles/engine": "^3.7.1",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.7.1",
     "antd": "^4.21.3",
     "classnames": "^2.3.1",
     "react-router-dom": "^6.26.2"
