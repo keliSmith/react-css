@@ -12,9 +12,6 @@ function Home() {
           <div className={styles.logo}>
             <img src={favicon} alt='加载失败' />
           </div>
-          <div className={styles.menu}>
-            {/* <ul>{renderMenu()}</ul> */}
-          </div>
         </div>
       </div>
       <div className={styles.content}>
