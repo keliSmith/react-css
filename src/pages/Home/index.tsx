@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { SettingOutlined } from '@ant-design/icons'
+import ParticleLink from '@/components/ParticleLink'
 import favicon from '@/assets/favicon.png'
 import styles from './index.less';
 
@@ -28,6 +29,7 @@ function Home() {
       <div className={styles.setting}>
         <SettingOutlined />
       </div>
+      <ParticleLink></ParticleLink>
     </div>
   );
 }
