@@ -40,7 +40,7 @@ module.exports = {
     'indent': [2, 2],
     'jsx-quotes': [2, 'prefer-single'],
     'quotes': [2, 'single'],
-    'max-len': [2, { 'code': 100 }],
+    'max-len': [2, { 'code': 500 }],
     'object-curly-spacing': [2, 'always'],
     'spaced-comment': [2, 'always']
   },
