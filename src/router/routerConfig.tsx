@@ -4,6 +4,7 @@ import { Navigate } from 'react-router-dom'
 import React, { useState } from 'react';
 import Home from '@/pages/Home';
 import CardList from '@/pages/CardList';
+import LoveScene from '@/pages/LoveScene';
 
 import Card from '@/components/Card';
 import DigitalClock from '@/components/DigitalClock';
@@ -124,6 +125,10 @@ const routes: RouteObject[] = [
         element: <IntervalometerContainer/>
       }
     ],
+  },
+  {
+    path: '/loveScene',
+    element: <LoveScene />,
   },
   {
     path: '*\'',

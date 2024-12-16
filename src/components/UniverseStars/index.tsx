@@ -9,18 +9,18 @@ const UniverseStars = () => {
     // const universeCanvas = universeCanvasRef.current
     // if (universeCanvas === null)  return;
     // const universeCtx = universeCanvas.getContext('2d')
-    // initUniverse();
+    initUniverse();
     initMeteorRain();
     window.onresize = () => {
-      // initUniverse();
+      initUniverse();
       initMeteorRain();
     }
   }, []);
 
   return (
     <div className={styles.container}>
-      <canvas id='universeCanvas'></canvas>
-      <canvas id='meteorRainCanvas'></canvas>
+      <canvas className={styles.universeCanvas} id='universeCanvas'></canvas>
+      <canvas className={styles.meteorRainCanvas} id='meteorRainCanvas'></canvas>
     </div>
   );
 };

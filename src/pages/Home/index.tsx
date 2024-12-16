@@ -116,7 +116,7 @@ function Home() {
                   <img src={i1} alt='' />
                 </div>
               </NavLink>
-              <a className={styles.projectItem}>
+              <NavLink to='loveScene' className={styles.projectItem}>
                 <div className={styles.projectItemLeft}>
                   <h1>表白</h1>
                   <p>真情流露</p>
@@ -124,7 +124,7 @@ function Home() {
                 <div className={styles.projectItemRight}>
                   <img src={i3} alt='' />
                 </div>
-              </a>
+              </NavLink>
               <a className={styles.projectItem}>
                 <div className={styles.projectItemLeft}>
                   <h1>实验室</h1>

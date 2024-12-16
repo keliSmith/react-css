@@ -122,7 +122,7 @@ function initMeteorRain() {
     w = canvas.width = windowWidth,
     h = canvas.height = windowHeight,
     rains: IntMeteor[] = [],
-    maxMeteor = 5 // 流星数量
+    maxMeteor = 50 // 流星数量
 
   let count = 0
 
@@ -152,7 +152,7 @@ function initMeteorRain() {
     this.angle = 30; // 倾斜角度
     this.width = -1; // 宽度
     this.height = -1; // 高度
-    this.speed = 1; // 速度
+    this.speed = 2; // 速度
     this.offset_x = -1; // 横轴移动偏移量
     this.offset_y = -1; // 纵轴移动偏移量
     this.alpha = 1; // 透明度
