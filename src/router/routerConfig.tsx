@@ -6,6 +6,7 @@ import Home from '@/pages/Home';
 import CardList from '@/pages/CardList';
 import LoveScene from '@/pages/LoveScene';
 
+import ParticleDemo from '@/components/Particles'
 import Card from '@/components/Card';
 import DigitalClock from '@/components/DigitalClock';
 import HoverLoad from '@/components/HoverLoad';
@@ -129,6 +130,10 @@ const routes: RouteObject[] = [
   {
     path: '/loveScene',
     element: <LoveScene />,
+  },
+  {
+    path: '/particleScene',
+    element: <ParticleDemo />,
   },
   {
     path: '*\'',

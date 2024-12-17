@@ -125,15 +125,15 @@ function Home() {
                   <img src={i3} alt='' />
                 </div>
               </NavLink>
-              <a className={styles.projectItem}>
+              <NavLink to='particleScene' className={styles.projectItem}>
                 <div className={styles.projectItemLeft}>
-                  <h1>实验室</h1>
-                  <p>收集有趣html作品</p>
+                  <h1>粒子实验室</h1>
+                  <p>粒子动效实现</p>
                 </div>
                 <div className={styles.projectItemRight}>
                   <img src={i2} alt='' />
                 </div>
-              </a>
+              </NavLink>
               <a className={styles.projectItem}>
                 <div className={styles.projectItemLeft}>
                   <h1>实验室</h1>

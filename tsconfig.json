@@ -14,7 +14,8 @@
           "@/*": ["src/*"]
         },
         "typeRoots": ["./src/typings","node_modules/@types"],
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "suppressImplicitAnyIndexErrors": true
       },
       "exclude": ["node_modules"],
       "include": ["src", "./src/typings/*.d.ts"]
