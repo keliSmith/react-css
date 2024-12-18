@@ -63,6 +63,7 @@
     "@tsparticles/react": "^3.0.0",
     "antd": "^5.22.5",
     "classnames": "^2.3.1",
+    "react-pageflip": "^2.0.3",
     "react-router-dom": "^6.26.2"
   },
   "repository": "https://github.com/keliSmith/react-css.git"
