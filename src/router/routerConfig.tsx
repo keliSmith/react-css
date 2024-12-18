@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Home from '@/pages/Home';
 import CardList from '@/pages/CardList';
 import LoveScene from '@/pages/LoveScene';
+import LoveBook from '@/pages/LoveBook';
 
 import ParticleDemo from '@/components/Particles'
 import Card from '@/components/Card';
@@ -134,6 +135,10 @@ const routes: RouteObject[] = [
   {
     path: '/particleScene',
     element: <ParticleDemo />,
+  },
+  {
+    path: '/loveBook',
+    element: <LoveBook />,
   },
   {
     path: '*\'',

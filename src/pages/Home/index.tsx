@@ -180,7 +180,7 @@ function Home() {
                   <img src={yuque} alt='加载失败' />
                 </div>
               </a>
-              <a className={styles.projectItem}>
+              <NavLink to='loveBook' className={styles.projectItem}>
                 <div className={styles.projectItemLeft}>
                   <h1>Love</h1>
                   <p>记录爱情语录</p>
@@ -188,7 +188,7 @@ function Home() {
                 <div className={styles.projectItemRight}>
                   <img src={book} alt='加载失败' />
                 </div>
-              </a>
+              </NavLink>
             </div>
             <div className={styles.title}>
               <img src={skillsIcon} alt='加载失败' />
