@@ -1,5 +1,5 @@
 import React from 'react';
-import avatar from '@/assets/avatar.png';
+import avatar from '@/assets/imgs/avatar.png';
 import styles from './index.less';
 
 const MyCard = () => {

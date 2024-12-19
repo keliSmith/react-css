@@ -42,23 +42,13 @@ export const initWebpackConfig = (mode: 'development' | 'production'):Configurat
           ]
         },
         {
-          test: /\.css$/i,
+          test: /\.(css)$/i,
           use: [
             isPro ? MiniCssExtractPlugin.loader : 'style-loader',
             {
               loader: 'css-loader',
               options: {
-                modules: {
-                  // mode: "local",
-                  // auto: true,
-                  // exportGlobals: true,
-                  localIdentName: '[local]_[hash:base64:5]',
-                  localIdentContext: path.resolve(__dirname, 'src'),
-                  // localIdentHashSalt: "my-custom-hash",
-                  // namedExport: true,
-                  // exportLocalsConvention: "camelCase",
-                  // exportOnlyLocals: false,
-                },
+                modules: false,
               },
             },
             'postcss-loader',
@@ -99,7 +89,7 @@ export const initWebpackConfig = (mode: 'development' | 'production'):Configurat
     plugins: [
       new HtmlWebpackPlugin({
         title: 'css-animation',
-        favicon: path.join(__dirname, ('../src/assets/favicon.png')),
+        favicon: path.join(__dirname, ('../src/assets/imgs/favicon.png')),
         filename: 'index.html',
         template: path.resolve(__dirname, './public.ejs'),
         hash: true,

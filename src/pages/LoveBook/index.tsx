@@ -1,14 +1,13 @@
 import React, { ReactNode } from 'react';
 import HTMLFlipBook from 'react-pageflip';
-import bookBg from '@/assets/bookBg.jpg';
+import bookBg from '@/assets/imgs/bookBg.jpg';
 
-import styles from  './index.less';
-import classNames from 'classnames';
+import  './index.css';
 
-const PageCover = React.forwardRef((props: {children: ReactNode}, ref: any) => {
+const PageCover = React.forwardRef((props: {children: ReactNode, className: string}, ref: any) => {
   return (
-    <div className={classNames(styles['page-cover'], styles['page-cover-top'], styles['page-cover-bottom'], styles.left, styles.right)} ref={ref} data-density='hard'>
-      <div className={styles['page-content']}>
+    <div className={`${props.className} page page-cover`} ref={ref} data-density='hard'>
+      <div className={'page-content'}>
         <h2>{props.children}</h2>
       </div>
     </div>
@@ -17,12 +16,12 @@ const PageCover = React.forwardRef((props: {children: ReactNode}, ref: any) => {
 
 const Page = React.forwardRef((props: {number: number, children: ReactNode}, ref: any) => {
   return (
-    <div className={classNames(styles.page)} ref={ref}>
-      <div className={styles['page-content']}>
-        <h2 className={styles['page-header']}>Page header - {props.number}</h2>
-        <div className={styles['page-image']}></div>
-        <div className={styles['page-text']}>{props.children}</div>
-        <div className={styles['page-footer']}>{props.number + 1}</div>
+    <div className='page' ref={ref}>
+      <div className='page-content'>
+        <h2 className='page-header'>Page header - {props.number}</h2>
+        <div className='page-image'></div>
+        <div className='page-text'>{props.children}</div>
+        <div className='page-footer'>{props.number + 1}</div>
       </div>
     </div>
   );
@@ -56,9 +55,9 @@ class LoveBook extends React.Component {
 
   render() {
     return (
-      <div className={styles.container}>
+      <div className='container'>
         <HTMLFlipBook
-          className={classNames(styles.book, styles['flip-book'])}
+          className='book'
           style={{ backgroundImage: `url(${bookBg})` }}
           width={550}
           height={733}
@@ -74,12 +73,12 @@ class LoveBook extends React.Component {
           onFlip={this.onFlip}
         >
 
-          <PageCover>BOOK TITLE</PageCover>
+          <PageCover className='page-cover-top'>BOOK TITLE</PageCover>
           <Page number={1}>Lorem ipsum...</Page>
           <Page number={2}>Lorem ipsum...</Page>
           <Page number={3}>Lorem ipsum...</Page>
           <Page number={4}>Lorem ipsum...</Page>
-          <PageCover>THE END</PageCover>
+          <PageCover className='page-cover-bottom'>THE END</PageCover>
         </HTMLFlipBook>
       </div>
     );

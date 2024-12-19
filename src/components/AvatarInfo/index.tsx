@@ -10,7 +10,7 @@ import {
   DropboxOutlined
 } from '@ant-design/icons';
 import classNames from 'classnames';
-import avatar from '@/assets/avatar.png';
+import avatar from '@/assets/imgs/avatar.png';
 
 const AvatarInfo = () => {
   const [visible, setVisible] = useState(false);
