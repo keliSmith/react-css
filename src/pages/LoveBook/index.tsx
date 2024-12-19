@@ -19,7 +19,6 @@ const Page = React.forwardRef((props: {number: number, children: ReactNode}, ref
     <div className='page' ref={ref}>
       <div className='page-content'>
         <h2 className='page-header'>Page header - {props.number}</h2>
-        <div className='page-image'></div>
         <div className='page-text'>{props.children}</div>
         <div className='page-footer'>{props.number + 1}</div>
       </div>
@@ -74,7 +73,20 @@ class LoveBook extends React.Component {
         >
 
           <PageCover className='page-cover-top'>BOOK TITLE</PageCover>
-          <Page number={1}>Lorem ipsum...</Page>
+          <Page number={1}>
+            <div>
+              <h1>很开心我们出现在彼此的生命里</h1>
+              <div>
+                <p>很开心我们出现在彼此的生命里</p>
+                <p>成为彼此很重要的人</p>
+                <p>离不开也不想离开的人</p>
+                <p>虽然我不是那个一直暖心的人</p>
+                <p>也会有闹脾气和不理解</p>
+                <p>但我希望我在你的眼里</p>
+                <p>依然是很好的那个</p>
+              </div>
+            </div>
+          </Page>
           <Page number={2}>Lorem ipsum...</Page>
           <Page number={3}>Lorem ipsum...</Page>
           <Page number={4}>Lorem ipsum...</Page>
