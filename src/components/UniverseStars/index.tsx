@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { initUniverse, initMeteorRain } from './util'
+import rainBg from '@/assets/imgs/rainBg.png'
+
 import styles from './index.less';
 
 const UniverseStars = () => {
@@ -21,6 +23,7 @@ const UniverseStars = () => {
     <div className={styles.container}>
       <canvas className={styles.universeCanvas} id='universeCanvas'></canvas>
       <canvas className={styles.meteorRainCanvas} id='meteorRainCanvas'></canvas>
+      <img className={styles.rainBg} src={rainBg} alt='加载失败' />
     </div>
   );
 };

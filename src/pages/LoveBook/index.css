@@ -36,6 +36,11 @@
 
   .page-header {
     height: 30px;
+    width: 100%;
+    background-image: url("../../assets/imgs/rose.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
@@ -44,12 +49,32 @@
     border-bottom: solid 1px #f3e7d7;
   }
 
-  .page-text {
+  .page-main {
+    position: relative;
     height: 100%;
     flex-grow: 1;
     text-align: justify;
     box-sizing: border-box;
     font-family: SentyPea;
+    .text {
+      width: 80%;
+      padding: 0 20px;
+      h1 {
+        font-size: 38px;
+        font-weight: bolder;
+        font-family: love;
+      }
+      p {
+        font-size: 18px;
+        font-style: italic;
+      }
+    }
+    img {
+      position: absolute;
+      right: 20px;
+      bottom: 0;
+      height: 200px;
+    }
   }
 
   .page-footer {

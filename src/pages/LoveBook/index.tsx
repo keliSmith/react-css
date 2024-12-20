@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import bookBg from '@/assets/imgs/bookBg.jpg';
+import { bookContents } from './config'
 
 import  './index.css';
 
@@ -13,14 +14,31 @@ const PageCover = React.forwardRef((props: {children: ReactNode, className: stri
     </div>
   );
 });
+interface ITextObj {
+  title: string,
+  content: Array<string>,
+  img?: string
+}
 
-const Page = React.forwardRef((props: {number: number, children: ReactNode}, ref: any) => {
+const Page = React.forwardRef((props: {number: number, textObj: ITextObj,  children?: ReactNode}, ref: any) => {
+  const { number, textObj } = props
   return (
     <div className='page' ref={ref}>
       <div className='page-content'>
-        <h2 className='page-header'>Page header - {props.number}</h2>
-        <div className='page-text'>{props.children}</div>
-        <div className='page-footer'>{props.number + 1}</div>
+        <h2 className='page-header'></h2>
+        <div className='page-main'>
+          <div className='text'>
+            <h1>{textObj.title}</h1>
+            {
+              textObj.content.map(text => <p key={text}>{text}</p>)
+            }
+          </div>
+          {
+            textObj.img && <img src={textObj.img} alt='加载失败' />
+          }
+          { props.children }
+        </div>
+        <div className='page-footer'>{number}</div>
       </div>
     </div>
   );
@@ -46,12 +64,6 @@ class LoveBook extends React.Component {
     });
   };
 
-  // componentDidMount() {
-  //   this.setState({
-  //     totalPage: this.flipBook.getPageFlip().getPageCount(),
-  //   });
-  // }
-
   render() {
     return (
       <div className='container'>
@@ -73,23 +85,11 @@ class LoveBook extends React.Component {
         >
 
           <PageCover className='page-cover-top'>BOOK TITLE</PageCover>
-          <Page number={1}>
-            <div>
-              <h1>很开心我们出现在彼此的生命里</h1>
-              <div>
-                <p>很开心我们出现在彼此的生命里</p>
-                <p>成为彼此很重要的人</p>
-                <p>离不开也不想离开的人</p>
-                <p>虽然我不是那个一直暖心的人</p>
-                <p>也会有闹脾气和不理解</p>
-                <p>但我希望我在你的眼里</p>
-                <p>依然是很好的那个</p>
-              </div>
-            </div>
-          </Page>
-          <Page number={2}>Lorem ipsum...</Page>
-          <Page number={3}>Lorem ipsum...</Page>
-          <Page number={4}>Lorem ipsum...</Page>
+          {
+            bookContents.map((item, index) => {
+              return <Page number={index + 1} key={index} textObj={item}></Page>
+            })
+          }
           <PageCover className='page-cover-bottom'>THE END</PageCover>
         </HTMLFlipBook>
       </div>
