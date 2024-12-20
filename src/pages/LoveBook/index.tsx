@@ -1,6 +1,15 @@
 import React, { ReactNode } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import bookBg from '@/assets/imgs/bookBg.jpg';
+import lover from '@/assets/imgs/lover.png';
+import lover1 from '@/assets/imgs/lover1.png';
+import bookBefore from '@/assets/imgs/bookBefore.png';
+import bookEnd from '@/assets/imgs/bookEnd.png';
+import rose1 from '@/assets/imgs/rose1.png';
+import rose2 from '@/assets/imgs/rose2.png';
+import rose3 from '@/assets/imgs/rose3.png';
+import rose4 from '@/assets/imgs/rose4.png';
+import rose5 from '@/assets/imgs/rose5.png';
 import { bookContents } from './config'
 
 import  './index.css';
@@ -8,9 +17,7 @@ import  './index.css';
 const PageCover = React.forwardRef((props: {children: ReactNode, className: string}, ref: any) => {
   return (
     <div className={`${props.className} page page-cover`} ref={ref} data-density='hard'>
-      <div className={'page-content'}>
-        <h2>{props.children}</h2>
-      </div>
+      {props.children}
     </div>
   );
 });
@@ -22,6 +29,7 @@ interface ITextObj {
 
 const Page = React.forwardRef((props: {number: number, textObj: ITextObj,  children?: ReactNode}, ref: any) => {
   const { number, textObj } = props
+  const roses = [rose1, rose2, rose3, rose4, rose5]
   return (
     <div className='page' ref={ref}>
       <div className='page-content'>
@@ -33,9 +41,7 @@ const Page = React.forwardRef((props: {number: number, textObj: ITextObj,  child
               textObj.content.map(text => <p key={text}>{text}</p>)
             }
           </div>
-          {
-            textObj.img && <img src={textObj.img} alt='加载失败' />
-          }
+          <img src={textObj.img || roses[Math.floor(number/2)]} alt='加载失败' />
           { props.children }
         </div>
         <div className='page-footer'>{number}</div>
@@ -84,13 +90,32 @@ class LoveBook extends React.Component {
           onFlip={this.onFlip}
         >
 
-          <PageCover className='page-cover-top'>BOOK TITLE</PageCover>
+          <PageCover className='page-cover-top'>
+            <div className='cover-img'>
+              <img src={lover} alt='加载失败' />
+            </div>
+            <div className='cover-desc'>
+              <h1>很高兴遇见你，谢谢你来爱我</h1>
+              <p>欢欢 ❤️ 朱朱</p>
+              <img src={bookBefore} alt='加载失败' />
+              <span>遇见你是所有故事的开始，谨以此书献给我唯一的读者</span>
+            </div>
+          </PageCover>
           {
             bookContents.map((item, index) => {
               return <Page number={index + 1} key={index} textObj={item}></Page>
             })
           }
-          <PageCover className='page-cover-bottom'>THE END</PageCover>
+          <PageCover className='page-cover-bottom'>
+            <div className='cover-img'>
+              <img src={lover1} alt='加载失败' />
+            </div>
+            <div className='cover-desc'>
+              <h1>往后余生，唯独是你</h1>
+              <img src={bookEnd} alt='加载失败' />
+              <span>我能想到最浪漫的事，就是把对你的爱写进书里</span>
+            </div>
+          </PageCover>
         </HTMLFlipBook>
       </div>
     );

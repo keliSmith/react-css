@@ -4,6 +4,7 @@ import rose3 from '@/assets/imgs/rose3.png'
 import rose4 from '@/assets/imgs/rose4.png'
 import rose5 from '@/assets/imgs/rose5.png'
 
+// https://588ku.com/ku/searchByPic?type=13&id=10450503
 
 export const bookContents = [
   {
