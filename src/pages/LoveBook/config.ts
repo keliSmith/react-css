@@ -6,6 +6,8 @@ import rose5 from '@/assets/imgs/rose5.png'
 
 // https://588ku.com/ku/searchByPic?type=13&id=10450503
 
+const roses = [rose1, rose2, rose3, rose4, rose5]
+
 export const bookContents = [
   {
     title: '很开心我们出现在彼此的生命里',
@@ -136,4 +138,12 @@ export const bookContents = [
       '爱你，我的宝❤️',
     ],
   },
-]
+].map(item => {
+  if (item.img) {
+    return item;
+  }
+  return {
+    ...item,
+    img: roses[Math.floor(Math.random()*5)+1]
+  }
+})

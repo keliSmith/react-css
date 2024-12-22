@@ -5,11 +5,6 @@ import lover from '@/assets/imgs/lover.png';
 import lover1 from '@/assets/imgs/lover1.png';
 import bookBefore from '@/assets/imgs/bookBefore.png';
 import bookEnd from '@/assets/imgs/bookEnd.png';
-import rose1 from '@/assets/imgs/rose1.png';
-import rose2 from '@/assets/imgs/rose2.png';
-import rose3 from '@/assets/imgs/rose3.png';
-import rose4 from '@/assets/imgs/rose4.png';
-import rose5 from '@/assets/imgs/rose5.png';
 import { bookContents } from './config'
 
 import  './index.css';
@@ -29,7 +24,6 @@ interface ITextObj {
 
 const Page = React.forwardRef((props: {number: number, textObj: ITextObj,  children?: ReactNode}, ref: any) => {
   const { number, textObj } = props
-  const roses = [rose1, rose2, rose3, rose4, rose5]
   return (
     <div className='page' ref={ref}>
       <div className='page-content'>
@@ -41,7 +35,7 @@ const Page = React.forwardRef((props: {number: number, textObj: ITextObj,  child
               textObj.content.map(text => <p key={text}>{text}</p>)
             }
           </div>
-          <img src={textObj.img || roses[Math.floor(number/2)]} alt='加载失败' />
+          <img src={textObj.img} alt='加载失败' />
           { props.children }
         </div>
         <div className='page-footer'>{number}</div>
