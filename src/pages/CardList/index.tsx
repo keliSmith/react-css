@@ -93,7 +93,12 @@ const routerConfit = [
     id: 18,
     name: 'Intervalometer',
     path: 'Intervalometer'
-  }
+  },
+  {
+    id: 19,
+    name: 'Heartbeat',
+    path: 'Heartbeat'
+  },
 ]
 
 function CardList() {
