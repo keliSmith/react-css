@@ -28,6 +28,7 @@ import TaiJi from '@/components/TaiJi';
 import { ScrollAnimate } from '@/components/ScrollAnimate';
 import Intervalometer from '@/components/Intervalometer';
 import Heartbeat from '@/components/Heartbeat';
+import HeartScene from '@/components/HeartScene';
 
 const IntervalometerContainer = () => {
   const [isRuning, setIsRuning] = useState(true);
@@ -130,6 +131,10 @@ const routes: RouteObject[] = [
       {
         path: 'Heartbeat',
         element: <Heartbeat/>
+      },
+      {
+        path: 'HeartScene',
+        element: <HeartScene/>
       },
     ],
   },
