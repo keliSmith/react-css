@@ -29,6 +29,7 @@ import { ScrollAnimate } from '@/components/ScrollAnimate';
 import Intervalometer from '@/components/Intervalometer';
 import Heartbeat from '@/components/Heartbeat';
 import HeartScene from '@/components/HeartScene';
+import CubePhoto from '@/components/CubePhoto';
 
 const IntervalometerContainer = () => {
   const [isRuning, setIsRuning] = useState(true);
@@ -135,6 +136,10 @@ const routes: RouteObject[] = [
       {
         path: 'HeartScene',
         element: <HeartScene/>
+      },
+      {
+        path: 'cubePhoto',
+        element: <CubePhoto/>
       },
     ],
   },

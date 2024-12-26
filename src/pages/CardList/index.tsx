@@ -104,6 +104,11 @@ const routerConfit = [
     name: 'HeartScene',
     path: 'HeartScene'
   },
+  {
+    id: 21,
+    name: 'CubePhoto',
+    path: 'CubePhoto'
+  },
 ]
 
 function CardList() {

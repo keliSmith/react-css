@@ -320,31 +320,17 @@ export function drawHeart () {
   init();
 }
 
-export function writeContent (i: number){
+export function writeContent (i: number, strArr: string[] = []){
   let charIndex = i;
+  const textArr = strArr
   const myContentHtml = document.getElementById('myContent') as HTMLElement;
   const blinkHtml = document.getElementById('blink') as HTMLElement;
-  const textArr = [
-    '我以为我这辈子不会有爱情了<br>',
-    '直至你的到来，闯进了我的生活<br>',
-    '用你的热情温暖了我冰冷的心，<br>',
-    '让我知道恋爱原来是那么美好<br>',
-    '真想和你一起慢慢变老.<br>',
-    '十几年前我们认识，那是的你我似乎有点生疏<br>',
-    '十几年后的我们再次相遇<br>',
-    '这就是缘分吧，命运的安排让我再次走在了一起<br>',
-    '所以我想我必须珍视这份来之不易的感情<br>',
-    '一生守候不是一句简单而苍白的山盟海誓，<br>',
-    '而是无数个平淡的日子同舟共济，相濡以沫.<br>',
-    '相信右下角的计时器, 将永远继续下去, 直至数据溢出.<br>',
-    '<br>',
-    '----------------------- Just for You, zhuzhu<br>',
-  ]
+
   const inputText = textArr.join('');
   const stringLength = inputText.length;
 
-  let initString = myContentHtml.innerHTML;
-  initString = initString.replace(/<SPAN.*$/gi,'');
+  let initString = myContentHtml?.innerHTML;
+  initString = initString?.replace(/<SPAN.*$/gi,'');
 
 
   let theChar = inputText.charAt(charIndex);
@@ -356,17 +342,17 @@ export function writeContent (i: number){
   }
   initString = initString + theChar + '<SPAN id=\'blink\'>_</SPAN>';
 
-  myContentHtml.innerHTML = initString;
+  myContentHtml ? myContentHtml.innerHTML = initString : '';
 
   charIndex = charIndex/1 +1;
   if(charIndex%2==1){
-    blinkHtml.style.display='none';
+    blinkHtml ? blinkHtml.style.display='none' : '';
   }else{
-    blinkHtml.style.display='inline';
+    blinkHtml ? blinkHtml.style.display='inline' : '';
   }
 
   if(charIndex<=stringLength){
-    setTimeout(() => writeContent(charIndex), 140);
+    setTimeout(() => writeContent(charIndex, strArr), 140);
   }else{
     blinkSpan(blinkHtml);
   }
@@ -379,7 +365,7 @@ function blinkSpan(node: HTMLElement){
   }else{
     currentStyle='inline';
   }
-  node.style.display = currentStyle;
+  node ? node.style.display = currentStyle : '';
   setTimeout(() => blinkSpan(node),100);
 }
 
@@ -409,5 +395,5 @@ export function showTime() {
 		+ '&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp'
 		+	'<c style="color: #CCCCCC; text-shadow:2px 3px 3px #222; font-family:Microsoft YaHei; font-size:20px" >----王八婆   2024-10-08</c>';
   const showTimeHtml = document.getElementById('show') as HTMLElement;
-  showTimeHtml.innerHTML=currentTimeString;  // 改这地方
+  showTimeHtml ? showTimeHtml.innerHTML=currentTimeString : '';  // 改这地方
 }
