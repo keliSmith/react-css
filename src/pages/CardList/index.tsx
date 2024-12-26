@@ -106,8 +106,8 @@ const routerConfit = [
   },
   {
     id: 21,
-    name: 'CubePhoto',
-    path: 'CubePhoto'
+    name: 'WallPhoto',
+    path: 'WallPhoto'
   },
 ]
 
